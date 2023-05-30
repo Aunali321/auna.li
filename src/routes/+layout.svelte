@@ -1,6 +1,15 @@
 <script>
 	import '../app.postcss';
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, DarkMode } from 'flowbite-svelte';
+	import {
+		Avatar,
+		Navbar,
+		NavBrand,
+		NavLi,
+		NavUl,
+		NavHamburger,
+		DarkMode,
+		Spinner
+	} from 'flowbite-svelte';
 	import { onMount } from 'svelte';
 	import personal_logo from '../../src/assets/personal_logo.png';
 	var hasIconLoaded = false;
@@ -17,13 +26,13 @@
 		<Navbar navClass="px-60 py-6" let:hidden let:toggle>
 			<NavBrand href="/">
 				{#if hasIconLoaded}
-					<img
-						src={personal_logo}
-						width="60"
-						height="60"
-						class="mr-3 hover:rotate-360 transition duration-500 ease-in-out"
-						alt=""
-					/>
+					<div class="container">
+						<Avatar
+							src={personal_logo}
+							class="avatar mr-3 hover:rotate-360 transition duration-500 ease-in-out border-t-2 border-b-2 from-gray-900 to-gray-100 dark:from-gray-100 dark:to-gray-900 h-16 w-16"
+							alt=""
+						/>
+					</div>
 				{:else}
 					<div
 						class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-gray-100"
