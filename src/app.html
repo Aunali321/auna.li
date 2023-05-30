@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/personal_logo.png" />
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- a TEMPORARY fix to avoid light theme flashbang bug. (https://github.com/themesberg/flowbite-svelte/issues/782) -->
+	<script>
+		(function () {
+			const theme = localStorage.getItem('color-theme') || (window.matchMedia('(prefers-color-scheme:  dark)').matches ? 'dark' : 'light');
+			document.documentElement.classList.add(theme);
+		})();
+	</script>
+
+
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
