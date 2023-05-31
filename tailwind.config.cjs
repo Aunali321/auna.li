@@ -24,11 +24,29 @@ const config = {
 			},
 			rotate: {
 				360: '360deg'
+			},
+			keyframes: {
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				}
+			},
+			animation: {
+				'pulse-slow': 'pulse-slow 2s ease-in-out infinite'
 			}
 		}
 	},
 
-	plugins: [require('flowbite/plugin')]
+	plugins: [
+		require('flowbite/plugin'),
+		require('@catppuccin/tailwindcss')({
+			// prefix to use, e.g. `text-pink` becomes `text-ctp-pink`.
+			// default is `false`, which means no prefix
+			prefix: 'ctp',
+			// which flavour of colours to use by default, in the `:root`
+			defaultFlavour: 'mocha'
+		})
+	]
 };
 
 module.exports = config;

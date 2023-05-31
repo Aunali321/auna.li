@@ -29,7 +29,7 @@
 					<div class="container">
 						<Avatar
 							src={personal_logo}
-							class="avatar mr-3 hover:rotate-360 transition duration-500 ease-in-out border-t-2 border-b-2 from-gray-900 to-gray-100 dark:from-gray-100 dark:to-gray-900 h-16 w-16"
+							class="avatar mr-3 hover:rotate-360 transition duration-1000 ease-in-out h-16 w-16"
 							alt=""
 						/>
 					</div>
@@ -41,7 +41,12 @@
 				<!-- <img src={personal_logo} class="mr-3" height="60" width="60" alt="My Logo" /> -->
 			</NavBrand>
 			<NavHamburger on:click={toggle} />
-			<NavUl ulClass="text-2xl flex space-x-8 justify-center items-center" {hidden}>
+			<NavUl
+				ulClass="text-2xl flex space-x-8 justify-center items-center"
+				{hidden}
+				activeClass="text-ctp-mauve underline underline-offset-8 decoration-2 font-semibold"
+				nonActiveClass="hover:text-ctp-mauve"
+			>
 				<NavLi href="/"><DarkMode size="lg" initialTheme="dark" /></NavLi>
 				<NavLi href="/" active={true}>Home</NavLi>
 				<NavLi href="/about">About</NavLi>

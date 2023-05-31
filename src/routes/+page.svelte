@@ -1,6 +1,6 @@
 <script>
 	import { fade, blur, slide } from 'svelte/transition';
-	import { cubicOut } from 'svelte/easing';
+	import { quadInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	let animate = false;
 
@@ -9,17 +9,18 @@
 		'नमस्ते',
 		'પધારો',
 		'سَلَام',
+		'Hola',
 		'God dag',
 		'Bonjour',
-		'Guten Tag',
 		'Marhaba',
-		'Hola',
-		'こんにちは'
+		'こんにちは',
+		'Guten Tag'
 	];
+
 	let currentHello = helloInDifferentLanguages[0];
 	let currentIndex = 0;
 
-	// Function to update the hello text with the next language
+	// update the hello text with the next language
 	function updateHelloText() {
 		currentIndex = (currentIndex + 1) % helloInDifferentLanguages.length;
 		currentHello = helloInDifferentLanguages[currentIndex];
@@ -30,7 +31,7 @@
 	});
 </script>
 
-<section class="pt-28 dark:bg-gray-900">
+<section class="pt-28 dark:bg-gray-900 mocha">
 	{#if animate}
 		<div
 			class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
@@ -42,13 +43,15 @@
 				>
 					{#key currentHello}
 						{#if currentHello}
-							<span transition:slide={{ duration: 2000, easing: cubicOut }}
+							<span
+								class="py-2 text-ctp-mauve"
+								transition:slide={{ duration: 1000, easing: quadInOut }}
 								>{currentHello}! &nbsp
 							</span>
 						{/if}
 					{/key}
 				</h1>
-				<h1 class="mb-4 text-4xl p-0 font-bold md:text-6xl lg:text-8xl dark:text-white">
+				<h1 class="mb-4 text-4xl py-2 font-bold md:text-6xl lg:text-8xl dark:text-white sticky">
 					I'm Aunali K.
 				</h1>
 			</div>
@@ -63,7 +66,7 @@
 		<div class="flex items-center justify-center" transition:fade={{ duration: 700 }}>
 			<button
 				type="button"
-				class="py-3.5 px-7 mr-2 mb-2 text-xl font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+				class="hover:animate-pulse-slow py-3.5 px-7 mr-2 mb-2 text-xl font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
 				>👋 &nbsp;Connect with me</button
 			>
 		</div>
