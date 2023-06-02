@@ -9,10 +9,11 @@
 		'नमस्ते',
 		'પધારો',
 		'سَلَام',
+		'Cześć',
 		'Hola',
 		'God dag',
 		'Bonjour',
-		'Marhaba',
+		'Merhaba',
 		'こんにちは',
 		'Guten Tag'
 	];
@@ -44,7 +45,7 @@
 					{#key currentHello}
 						{#if currentHello}
 							<span
-								class="py-2 text-ctp-mauve"
+								class="py-2 text-latte-blue dark:text-ctp-mauve text-center"
 								transition:slide={{ duration: 1000, easing: quadInOut }}
 								>{currentHello}! &nbsp
 							</span>

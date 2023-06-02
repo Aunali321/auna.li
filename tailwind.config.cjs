@@ -20,6 +20,15 @@ const config = {
 					700: '#eb4f27',
 					800: '#d3330a',
 					900: '#d3330a'
+				},
+				latte: {
+					blue: '#1e66f5',
+					lavender: '#7287fd',
+					sapphire: '#209fb5'
+				},
+				mocha: {
+					lavender: '#b4befe',
+					sapphire: '#74c7ec'
 				}
 			},
 			rotate: {
