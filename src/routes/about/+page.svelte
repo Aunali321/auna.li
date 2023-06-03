@@ -100,8 +100,9 @@
 					</h3>
 				</div>
 
-				<div
-					class="flex items-center mt-5 hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer"
+				<a
+					href="https://revanced.app"
+					class="flex items-center mt-5 hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
 				>
 					<img
 						class="w-12 h-12 mr-2 rounded-full"
@@ -109,20 +110,20 @@
 						alt="Cossale"
 					/>
 					<div>
-						<a
-							href="https://revanced.app"
+						<h4
 							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 						>
 							ReVanced
-						</a>
+						</h4>
 						<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
 							Core team member
 						</p>
 					</div>
-				</div>
+				</a>
 
-				<div
-					class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer"
+				<a
+					href="https://venic.app"
+					class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
 				>
 					<img
 						class="w-12 h-12 mr-2 rounded-full"
@@ -130,17 +131,16 @@
 						alt="Cossale"
 					/>
 					<div>
-						<a
-							href="https://venic.app"
+						<h4
 							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 						>
 							Venic
-						</a>
+						</h4>
 						<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
 							Core team member
 						</p>
 					</div>
-				</div>
+				</a>
 			</Card>
 			<!-- Education Card -->
 			<Card class="mt-5">
@@ -200,16 +200,17 @@
 				<div class="items-center mt-5">
 					<!-- map skills and icons -->
 					{#each skillsWithIcons as skill}
-						<div
-							class="flex space-x-3 items-center hover:bg-gray-100 dark:hover:bg-gray-600 p-3 rounded-md cursor-pointer"
+						<a
+							href={skill.site}
+							class="flex space-x-3 items-center hover:bg-gray-100 dark:hover:bg-gray-600 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
 						>
 							<Img src={skill.icon} alt={skill.name + ' logo'} class="h-8 w-8" />
-							<a
-								href={skill.site}
+							<h4
 								class="text-base tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-								>{skill.name}</a
 							>
-						</div>
+								{skill.name}
+							</h4>
+						</a>
 					{/each}
 				</div>
 			</Card>
@@ -217,7 +218,7 @@
 
 		<div class="right max-w-screen-sm">
 			<h2
-				class="text-xl font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
+				class="text-xl mb-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Experience
 			</h2>
@@ -243,11 +244,11 @@
 				followers.
 			</ItemCard>
 			<h2
-				class="text-xl mt-10 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
+				class="text-xl mt-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Projects
 			</h2>
-			<div class="projects space-y-8">
+			<div class="projects space-y-2 mt-5">
 				<ItemCard
 					timespan="July 2022 - Present"
 					href="https://github.com/revanced/revanced-manager"
