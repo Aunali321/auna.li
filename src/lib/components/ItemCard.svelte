@@ -21,7 +21,7 @@
 		target="_blank"
 		rel="noreferrer"
 		class="font-medium dark:text-slate-200 text-slate-900 transition duration-100 hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-		><h3 class="group leading-snug">
+		><a {href} class="group leading-snug">
 			{role}
 			<span
 				class="mb-2 mt-1 text-xs font-semibold text-slate-500 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender"
@@ -30,7 +30,7 @@
 			><span class="inline-block translate-x-1 transition-transform group-hover:translate-x-2"
 				>←</span
 			>
-		</h3></a
+		</a></a
 	>
 	<p class="mt-2 font-sans text-sm leading-normal text-slate-500 dark:text-slate-300">
 		<slot />

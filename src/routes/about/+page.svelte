@@ -78,7 +78,7 @@
 				</p>
 			</div>
 			<!-- Experience Card -->
-			<Card class="mt-10">
+			<Card class="m-0 mt-10 p-5">
 				<div class="heading flex">
 					<svg
 						class="w-6 h-6 mr-2 text-ctp-mauve"
@@ -100,7 +100,9 @@
 					</h3>
 				</div>
 
-				<div class="flex items-center mt-5">
+				<div
+					class="flex items-center mt-5 hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer"
+				>
 					<img
 						class="w-12 h-12 mr-2 rounded-full"
 						src="https://raw.githubusercontent.com/revanced/revanced-branding/8914e9473afbefd2fa3245ed99cfe2b66e959e92/assets/revanced-logo/revanced-logo-round.svg"
@@ -119,7 +121,9 @@
 					</div>
 				</div>
 
-				<div class="flex items-center mt-5">
+				<div
+					class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer"
+				>
 					<img
 						class="w-12 h-12 mr-2 rounded-full"
 						src="https://avatars.githubusercontent.com/u/122711804?s=200&v=4"
@@ -193,10 +197,12 @@
 					</svg>
 					<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Skills</h3>
 				</div>
-				<div class="items-center mt-5 space-y-4">
+				<div class="items-center mt-5">
 					<!-- map skills and icons -->
 					{#each skillsWithIcons as skill}
-						<div class="flex space-x-3 items-center">
+						<div
+							class="flex space-x-3 items-center hover:bg-gray-100 dark:hover:bg-gray-600 p-3 rounded-md cursor-pointer"
+						>
 							<Img src={skill.icon} alt={skill.name + ' logo'} class="h-8 w-8" />
 							<a
 								href={skill.site}
