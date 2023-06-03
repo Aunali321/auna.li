@@ -10,8 +10,9 @@
 	export let tags: string[];
 </script>
 
-<div
-	class="relative p-4 w-full hover:scale-[1.02] transition-transform ease-in-out duration-200 dark:hover:bg-gray-800 hover:bg-gray-200 hover:rounded-lg"
+<a
+	{href}
+	class="inline-block relative p-4 w-full hover:scale-[1.02] transition-transform ease-in-out duration-200 dark:hover:bg-gray-800 hover:bg-gray-200 hover:rounded-lg"
 >
 	<header
 		class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500 sm:col-span-2"
@@ -53,4 +54,4 @@
 			{/each}
 		</ul>
 	{/if}
-</div>
+</a>

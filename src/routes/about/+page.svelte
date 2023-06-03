@@ -111,7 +111,7 @@
 					/>
 					<div>
 						<h4
-							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender pointer-events-none"
 						>
 							ReVanced
 						</h4>
@@ -132,7 +132,7 @@
 					/>
 					<div>
 						<h4
-							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender pointer-events-none"
 						>
 							Venic
 						</h4>
@@ -162,7 +162,9 @@
 					</svg>
 					<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Education</h3>
 				</div>
-				<div class="items-center mt-5">
+				<div
+					class="items-center mt-5 hover:scale-[1.02] transition-transform ease-in-out duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 hover:rounded-md cursor-pointer"
+				>
 					<a
 						href="https://maktabahjafariyah.org"
 						class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
