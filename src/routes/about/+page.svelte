@@ -1,4 +1,5 @@
 <script>
+	// @ts-ignore
 	import { Card, Hr, Img, Li, List } from 'flowbite-svelte';
 	import AnimatedLink from '$lib/components/AnimatedLink.svelte';
 	import ItemCard from '$lib/components/ItemCard.svelte';
@@ -41,11 +42,17 @@
 			site: 'https://developer.android.com/jetpack/compose'
 		}
 	];
+
+	// disable right clicking unless its <a> tag
+	document.addEventListener('contextmenu', (event) => {
+		// @ts-ignore
+		if (event.target.tagName !== 'A') event.preventDefault();
+	});
 </script>
 
-<section class="py-12 latte dark:bg-gray-900 dark:mocha">
+<section class="py-12 latte dark:bg-gray-900 select-none dark:mocha">
 	<div class="flex space-x-36 justify-center">
-		<div class="left w-1/4 select-none">
+		<div class="left w-1/4">
 			<div class="intro">
 				<!-- <Avatar class="mb-2 inline-block h-10 w-10" src={personal_logo} alt="Me" /> -->
 				<h5 class="font-semilight mb-1 tracking-tight text-slate-600 dark:text-slate-300">
@@ -102,7 +109,7 @@
 					<div>
 						<a
 							href="https://revanced.app"
-							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 						>
 							ReVanced
 						</a>
@@ -121,7 +128,7 @@
 					<div>
 						<a
 							href="https://venic.app"
-							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 						>
 							Venic
 						</a>
@@ -154,7 +161,7 @@
 				<div class="items-center mt-5">
 					<a
 						href="https://maktabahjafariyah.org"
-						class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+						class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 					>
 						Bachelor of Computer Applications
 					</a>
@@ -191,7 +198,9 @@
 					{#each skillsWithIcons as skill}
 						<div class="flex space-x-3 items-center">
 							<Img src={skill.icon} alt={skill.name + ' logo'} class="h-8 w-8" />
-							<a href={skill.site} class="text-base tracking-tight text-gray-900 dark:text-white"
+							<a
+								href={skill.site}
+								class="text-base tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 								>{skill.name}</a
 							>
 						</div>
