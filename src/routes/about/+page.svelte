@@ -1,12 +1,43 @@
 <script>
-	import { Card } from 'flowbite-svelte';
-	import TagChip from '$lib/components/TagChip.svelte';
+	import { Card, Hr, Img, Li, List } from 'flowbite-svelte';
 	import AnimatedLink from '$lib/components/AnimatedLink.svelte';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import ItemCard from '$lib/components/ItemCard.svelte';
+
+	let baseIconsURL = 'https://cdn.simpleicons.org/';
+	let skillsWithIcons = [
+		{
+			name: 'Flutter',
+			icon: `${baseIconsURL}/flutter`
+		},
+		{
+			name: 'Dart',
+			icon: `${baseIconsURL}/dart`
+		},
+		{
+			name: 'Kotlin',
+			icon: `${baseIconsURL}/kotlin`
+		},
+		{
+			name: 'Javascript',
+			icon: `${baseIconsURL}/javascript`
+		},
+		{
+			name: 'PHP',
+			icon: `${baseIconsURL}/php`
+		},
+		{
+			name: 'TailwindCSS',
+			icon: `${baseIconsURL}/tailwindcss`
+		},
+		{
+			name: 'Jetpack Compose',
+			icon: `${baseIconsURL}/jetpackcompose`
+		}
+	];
 </script>
 
-<section class="pl-60 py-12 latte dark:bg-gray-900 dark:mocha">
-	<div class="flex">
+<section class="py-12 latte dark:bg-gray-900 dark:mocha">
+	<div class="flex space-x-36 justify-center">
 		<div class="left w-1/4">
 			<div class="intro">
 				<!-- <Avatar class="mb-2 inline-block h-10 w-10" src={personal_logo} alt="Me" /> -->
@@ -25,6 +56,11 @@
 				<p class="mt-4 text-lg font-normal tracking-tight text-slate-500 dark:text-slate-200">
 					A open-source developer from India. I'm a self-taught software developer who's very
 					passionate about reverse engineering.
+				</p>
+				<!-- about. smaller fonts -->
+				<p class="mt-4 text-md tracking-tight text-slate-500 dark:text-slate-200">
+					My interests include Reverse Engineering, P2P File transfer protocol, Web scraping, Bash
+					Scripting, Automation.
 				</p>
 			</div>
 			<!-- Experience Card -->
@@ -112,123 +148,157 @@
 					</p>
 				</div>
 			</Card>
+			<!-- skills card -->
+			<Card class="mt-5">
+				<div class="heading flex">
+					<svg
+						class="w-6 h-6 mr-2 text-ctp-mauve"
+						aria-hidden="true"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Skills</h3>
+				</div>
+				<div class="items-center mt-5 space-y-4">
+					<!-- map skills and icons -->
+					{#each skillsWithIcons as skill}
+						<div class="flex space-x-3 items-center">
+							<Img src={skill.icon} alt={skill.name + ' logo'} class="h-8 w-8" />
+							<span>{skill.name}</span>
+						</div>
+					{/each}
+				</div>
+			</Card>
 		</div>
-		<div class="right max-w-4xl mx-auto px-8 sm:px-12 lg:px-16">
+
+		<div class="right max-w-screen-sm">
 			<h2
 				class="text-xl font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Experience
 			</h2>
-			<div class="relative py-5 w-full">
-				<header
-					class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-				>
-					May 2022 - Present
-				</header>
-				<a
-					href="https://revanced.app"
-					target="_blank"
-					rel="noreferrer"
-					class="font-medium dark:text-slate-200 text-slate-900 transition duration-100 hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-					><h3 class="group leading-snug">
-						Core member · ReVanced <span
-							class="inline-block translate-x-1 transition-transform group-hover:translate-x-2"
-							>←</span
-						>
-					</h3></a
-				>
-				<p class="mt-2 font-sans text-sm leading-normal text-slate-500 dark:text-slate-300">
-					Following the shutdown of YT Vanced, I had the opportunity to collaborate with a group of
-					individuals I had not previously worked with. We worked together to preserve the legacy of
-					YT Vanced, resulting in the development of ReVanced - a powerful library that allows
-					developers to add features to existing applications. To simplify the installation process
-					for users, we also created an Android app. Today, ReVanced has a thriving community with
-					over 100k+ subredditors, 88k+ Discord members, 40k+ Telegram members, and 10k+ GitHub
-					followers.
-				</p>
-				<ul class="mt-2 flex flex-wrap">
-					<li class="mr-4">
-						<AnimatedLink href="https://github.com/revanced" showIcon={true}>GitHub</AnimatedLink>
-					</li>
-				</ul>
-			</div>
+			<ItemCard
+				timespan="May 2022 - Present"
+				href="https://revanced.app"
+				role="Core member · ReVanced"
+				short_desc=""
+				external_links={[
+					{
+						label: 'GitHub',
+						url: 'https://github.com/revanced'
+					}
+				]}
+				tags={[]}
+			>
+				Following the shutdown of YT Vanced, I had the opportunity to collaborate with a group of
+				individuals I had not previously worked with. We worked together to preserve the legacy of
+				YT Vanced, resulting in the development of ReVanced - a powerful library that allows
+				developers to add features to existing applications. To simplify the installation process
+				for users, we also created an Android app. Today, ReVanced has a thriving community with
+				over 100k+ subredditors, 88k+ Discord members, 40k+ Telegram members, and 10k+ GitHub
+				followers.
+			</ItemCard>
 			<h2
-				class="text-xl mt-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
+				class="text-xl mt-10 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Projects
 			</h2>
-			<!-- <ProjectCard
-				timespan="July 2022 - Present"
-				href="https://github.com/revanced/revanced-manager"
-				role="ReVanced Manager"
-				short_desc="patch any Dalvik Android application."
-				long_desc="The ReVanced Manager is an Android application that allows you to modify any Dalvik
-					Android application to add, remove and/or modify existing functionality. It dissassembles
-					the APK locally on your device, makes the required changes using our in-house
-					<AnimatedLink
-						href='https://github.com/revanced/revanced-patcher'>patcher library</AnimatedLink
-					>
-					and then assembles it back into an APK again. You can find it on
-					<AnimatedLink href='https://github.com/revanced/revanced-manager'>GitHub</AnimatedLink>
-					"
-				external_links={[
-					{
-						url: 'https://github.com/revanced/revanced-patcher',
-						label: 'revanced-patcher'
-					},
-					{
-						url: 'https://github.com/revanced/revanced-manager',
-						label: 'revanced-manager'
-					}
-				]}
-				tags={['Flutter', 'Dart', 'Kotlin']}
-			/> -->
-			<div class="relative mt-5 w-full">
-				<header
-					class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-				>
-					July 2022 — Present
-				</header>
-				<a
+			<div class="projects space-y-8">
+				<ItemCard
+					timespan="July 2022 - Present"
 					href="https://github.com/revanced/revanced-manager"
-					target="_blank"
-					rel="noreferrer"
-					class="font-medium dark:text-slate-200 text-slate-900 transition duration-100 hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-					><h3 class="group leading-snug">
-						ReVanced Manager - <span
-							class="mb-2 mt-1 text-xs font-semibold text-slate-500 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender"
-						>
-							patch any Dalvik Android application.</span
-						><span class="inline-block translate-x-1 transition-transform group-hover:translate-x-2"
-							>←</span
-						>
-					</h3></a
+					role="ReVanced Manager"
+					short_desc="- patch any Dalvik Android application."
+					external_links={[
+						{
+							url: 'https://github.com/revanced/revanced-patcher',
+							label: 'revanced-patcher'
+						},
+						{
+							url: 'https://github.com/revanced/revanced-manager',
+							label: 'revanced-manager'
+						}
+					]}
+					tags={['Flutter', 'Dart', 'Kotlin']}
 				>
-				<p class="mt-2 font-sans text-sm leading-normal text-slate-500 dark:text-slate-300">
 					The ReVanced Manager is an Android application that allows you to modify any Dalvik
 					Android application to add, remove and/or modify existing functionality. It dissassembles
-					the APK locally on your device, makes the required changes using our in-house <AnimatedLink
-						href="https://github.com/revanced/revanced-patcher">patcher library</AnimatedLink
+					the APK locally on your device, makes the required changes using our in-house
+					<AnimatedLink href="https://github.com/revanced/revanced-patcher"
+						>patcher library</AnimatedLink
 					>
 					and then assembles it back into an APK again. You can find it on
 					<AnimatedLink href="https://github.com/revanced/revanced-manager">GitHub</AnimatedLink>
-				</p>
-				<ul class="mt-2 flex flex-wrap">
-					<li class="mr-4 space-x-3">
-						<AnimatedLink href="https://github.com/revanced/revanced-patcher" showIcon={true}
-							>revanced-patcher</AnimatedLink
-						>
-						<AnimatedLink href="https://github.com/revanced/revanced-manager" showIcon={true}
-							>revanced-manager</AnimatedLink
-						>
-					</li>
-				</ul>
-				<ul class="mt-2 flex flex-wrap space-x-2">
-					<TagChip>Flutter</TagChip>
-					<TagChip>Dart</TagChip>
-					<TagChip>Kotlin</TagChip>
-				</ul>
+				</ItemCard>
+				<ItemCard
+					timespan="February 2022"
+					href="https://github.com/Aunali321/NotesCentral"
+					role="NotesCentral"
+					short_desc="- a practicals sharing app for students."
+					external_links={[
+						{
+							url: 'https://github.com/Aunali321/NotsCentral',
+							label: 'NotesCentral'
+						}
+					]}
+					tags={['PHP', 'MySQL', 'TailwindCSS']}
+				>
+					NotesCentral is a practicals sharing app for students primarily for code. It allows
+					students to upload their practicals and share them with other students. It has syntax
+					highlighting for code for popular programming languages. It also has authentication and
+					authorization. It is styled beautifully using TailwindCSS and is built using PHP and
+					MySQL.
+				</ItemCard>
+				<ItemCard
+					timespan="January 2022 - February 2022"
+					href="https://github.com/Aunali321/torrent_scraper"
+					role="Torrent Scraper"
+					short_desc="- a torrent scraper for 1337x."
+					external_links={[
+						{
+							url: 'https://github.com/Aunali321/torrent_scraper',
+							label: 'Torrent Scraper'
+						},
+						{
+							url: 'https://github.com/webtorrent/webtorrent',
+							label: 'WebTorrent'
+						}
+					]}
+					tags={['Dart', 'WebTorrent', 'Web Scraping']}
+				>
+					Scrapes 1337x torrent site to get magnet links. Magnet links are then passed to <AnimatedLink
+						href="https://github.com/webtorrent/webtorrent">WebTorrent</AnimatedLink
+					>
+					to download the file and stream it locally in VLC media player. It is built using Dart and
+					WebTorrent. It is a CLI application.
+				</ItemCard>
 			</div>
 		</div>
+	</div>
+	<!-- line that suggest end of page -->
+	<div class="flex justify-center items-center mt-16 px-24">
+		<Hr width="w-full mr-8" />
+		<svg
+			class="animate-bounce w-12 h-12 text-latte-blue dark:text-ctp-mauve"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+		>
+			<path
+				fill-rule="evenodd"
+				d="M10 3.333a6.667 6.667 0 100 13.334A6.667 6.667 0 0010 3.333zm0 1.667a5 5 0 100 10A5 5 0 0010 5z"
+				clip-rule="evenodd"
+			/>
+		</svg>
+		<Hr width="w-full ml-8" />
 	</div>
 </section>
