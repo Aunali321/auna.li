@@ -7,38 +7,45 @@
 	let skillsWithIcons = [
 		{
 			name: 'Flutter',
-			icon: `${baseIconsURL}/flutter`
+			icon: `${baseIconsURL}/flutter`,
+			site: 'https://flutter.dev'
 		},
 		{
 			name: 'Dart',
-			icon: `${baseIconsURL}/dart`
+			icon: `${baseIconsURL}/dart`,
+			site: 'https://dart.dev'
 		},
 		{
 			name: 'Kotlin',
-			icon: `${baseIconsURL}/kotlin`
+			icon: `${baseIconsURL}/kotlin`,
+			site: 'https://kotlinlang.org'
 		},
 		{
 			name: 'Javascript',
-			icon: `${baseIconsURL}/javascript`
+			icon: `${baseIconsURL}/javascript`,
+			site: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
 		},
 		{
 			name: 'PHP',
-			icon: `${baseIconsURL}/php`
+			icon: `${baseIconsURL}/php`,
+			site: 'https://www.php.net'
 		},
 		{
 			name: 'TailwindCSS',
-			icon: `${baseIconsURL}/tailwindcss`
+			icon: `${baseIconsURL}/tailwindcss`,
+			site: 'https://tailwindcss.com'
 		},
 		{
 			name: 'Jetpack Compose',
-			icon: `${baseIconsURL}/jetpackcompose`
+			icon: `${baseIconsURL}/jetpackcompose`,
+			site: 'https://developer.android.com/jetpack/compose'
 		}
 	];
 </script>
 
 <section class="py-12 latte dark:bg-gray-900 dark:mocha">
 	<div class="flex space-x-36 justify-center">
-		<div class="left w-1/4">
+		<div class="left w-1/4 select-none">
 			<div class="intro">
 				<!-- <Avatar class="mb-2 inline-block h-10 w-10" src={personal_logo} alt="Me" /> -->
 				<h5 class="font-semilight mb-1 tracking-tight text-slate-600 dark:text-slate-300">
@@ -93,9 +100,12 @@
 						alt="Cossale"
 					/>
 					<div>
-						<h4 class="text-lg font-medium tracking-tight text-gray-900 dark:text-white">
+						<a
+							href="https://revanced.app"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+						>
 							ReVanced
-						</h4>
+						</a>
 						<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
 							Core team member
 						</p>
@@ -109,7 +119,12 @@
 						alt="Cossale"
 					/>
 					<div>
-						<h4 class="text-lg font-medium tracking-tight text-gray-900 dark:text-white">Venic</h4>
+						<a
+							href="https://venic.app"
+							class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+						>
+							Venic
+						</a>
 						<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
 							Core team member
 						</p>
@@ -137,9 +152,12 @@
 					<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Education</h3>
 				</div>
 				<div class="items-center mt-5">
-					<h4 class="text-lg font-medium tracking-tight text-gray-900 dark:text-white">
+					<a
+						href="https://maktabahjafariyah.org"
+						class="text-lg font-medium tracking-tight text-gray-900 dark:text-white"
+					>
 						Bachelor of Computer Applications
-					</h4>
+					</a>
 					<p class="text-sm mt-1 font-normal tracking-tight text-gray-900 dark:text-white">
 						Maktabah Jafariyah Knowledge & Research Academy
 					</p>
@@ -173,7 +191,9 @@
 					{#each skillsWithIcons as skill}
 						<div class="flex space-x-3 items-center">
 							<Img src={skill.icon} alt={skill.name + ' logo'} class="h-8 w-8" />
-							<span>{skill.name}</span>
+							<a href={skill.site} class="text-base tracking-tight text-gray-900 dark:text-white"
+								>{skill.name}</a
+							>
 						</div>
 					{/each}
 				</div>
