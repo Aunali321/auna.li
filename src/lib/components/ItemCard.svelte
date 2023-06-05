@@ -1,6 +1,6 @@
 <script lang="ts">
-	import AnimatedLink from './AnimatedLink.svelte';
-	import TagChip from './TagChip.svelte';
+	import AnimatedLink from './atoms/AnimatedLink.svelte';
+	import TagChip from './atoms/TagChip.svelte';
 
 	export let timespan: string;
 	export let href: string;
