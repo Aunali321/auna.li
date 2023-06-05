@@ -51,19 +51,27 @@
 </script>
 
 <section class="py-12 latte dark:bg-gray-900 select-none dark:mocha">
-	<div class="flex space-x-36 justify-center">
-		<div class="left w-1/4">
-			<div class="intro">
+	<div class="flex flex-col md:flex-row md:space-x-36 justify-center">
+		<div class="left md:w-1/4">
+			<div class="intro text-center md:text-left px-8">
 				<!-- <Avatar class="mb-2 inline-block h-10 w-10" src={personal_logo} alt="Me" /> -->
 				<h5 class="font-semilight mb-1 tracking-tight text-slate-600 dark:text-slate-300">
 					Hi, my name is
 				</h5>
-				<h1 class="text-4xl font-bold tracking-tight text-slate-200">
+				<h1 class="hidden md:block text-4xl font-bold tracking-tight text-slate-200">
 					<span class="text-latte-blue dark:text-white">Aunali</span><span
 						class="pl-2 text-sm text-slate-500 dark:text-slate-300 underline decoration-slate-500 decoration-1"
 						title="also known as">aka</span
 					><span class="pl-2 text-sm text-slate-600 dark:text-slate-300">Cossale</span>
 				</h1>
+				<div class="md:hidden flex flex-col text-4xl font-bold tracking-tight text-slate-200">
+					<span class="text-latte-blue dark:text-white">Aunali</span>
+					<span
+						class="mb-4 text-sm text-slate-500 dark:text-slate-300 underline decoration-slate-500 decoration-1"
+						title="also known as"
+						>aka <span class="pl-2 text-sm text-slate-600 dark:text-slate-300">Cossale</span></span
+					>
+				</div>
 				<h3 class="text-lg font-medium tracking-tight text-slate-600 dark:text-slate-200">
 					Computer Science Student
 				</h3>
@@ -78,7 +86,7 @@
 				</p>
 			</div>
 			<!-- Experience Card -->
-			<Card class="m-0 mt-10 p-5">
+			<Card class="m-0 mt-10 p-5 mx-auto md:mx-0">
 				<div class="heading flex">
 					<svg
 						class="w-6 h-6 mr-2 text-ctp-mauve"
@@ -143,7 +151,7 @@
 				</a>
 			</Card>
 			<!-- Education Card -->
-			<Card class="mt-5">
+			<Card class="mt-5 mx-auto md:mx-0">
 				<div class="heading flex">
 					<svg
 						class="w-6 h-6 mr-2 text-ctp-mauve"
@@ -180,7 +188,7 @@
 				</div>
 			</Card>
 			<!-- skills card -->
-			<Card class="mt-5">
+			<Card class="mt-5 mx-auto md:mx-0">
 				<div class="heading flex">
 					<svg
 						class="w-6 h-6 mr-2 text-ctp-mauve"
@@ -220,7 +228,7 @@
 
 		<div class="right max-w-screen-sm">
 			<h2
-				class="text-xl mb-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
+				class="text-xl mt-10 md:mt-0 text-center md:text-left mb-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Experience
 			</h2>
@@ -246,16 +254,16 @@
 				followers.
 			</ItemCard>
 			<h2
-				class="text-xl mt-5 font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
+				class="text-xl mt-10 md:mt-5 text-center md:text-left font-bold uppercase tracking-widest text-latte-blue lg:relative lg:right-4 dark:text-ctp-mauve"
 			>
 				Projects
 			</h2>
-			<div class="projects space-y-2 mt-5">
+			<div class="projects md:space-y-2 mt-5">
 				<ItemCard
 					timespan="July 2022 - Present"
 					href="https://github.com/revanced/revanced-manager"
 					role="ReVanced Manager"
-					short_desc="- patch any Dalvik Android application."
+					short_desc="patch any Dalvik Android application."
 					external_links={[
 						{
 							url: 'https://github.com/revanced/revanced-patcher',
@@ -281,7 +289,7 @@
 					timespan="February 2022"
 					href="https://github.com/Aunali321/NotesCentral"
 					role="NotesCentral"
-					short_desc="- a practicals sharing app for students."
+					short_desc="a practicals sharing app for students."
 					external_links={[
 						{
 							url: 'https://github.com/Aunali321/NotsCentral',
@@ -300,7 +308,7 @@
 					timespan="January 2022 - February 2022"
 					href="https://github.com/Aunali321/torrent_scraper"
 					role="Torrent Scraper"
-					short_desc="- a torrent scraper for 1337x."
+					short_desc="a torrent scraper for 1337x."
 					external_links={[
 						{
 							url: 'https://github.com/Aunali321/torrent_scraper',
@@ -323,7 +331,7 @@
 		</div>
 	</div>
 	<!-- line that suggest end of page -->
-	<div class="flex justify-center items-center mt-16 px-24">
+	<div class="flex justify-center items-center mt-16 px-8 md:px-24">
 		<Hr width="w-full mr-8" />
 		<svg
 			class="animate-bounce w-12 h-12 text-latte-blue dark:text-ctp-mauve"
