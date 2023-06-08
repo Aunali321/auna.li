@@ -34,6 +34,9 @@ const config = {
 			rotate: {
 				360: '360deg'
 			},
+			textDecorationThickness: {
+				6: '6px'
+			},
 			keyframes: {
 				'pulse-slow': {
 					'0%, 100%': { opacity: '1' },

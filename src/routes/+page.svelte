@@ -2,6 +2,7 @@
 	import { fade, blur, slide } from 'svelte/transition';
 	import { quadInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import CircularButton from '$lib/components/atoms/CircularButton.svelte';
 	let animate = false;
 
 	const helloInDifferentLanguages = [
@@ -65,11 +66,7 @@
 		</div>
 
 		<div class="flex items-center justify-center" transition:fade={{ duration: 700 }}>
-			<button
-				type="button"
-				class="hover:animate-pulse-slow py-3.5 px-7 mr-2 mb-2 text-xl font-semibold text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-				>👋 &nbsp;Connect with me</button
-			>
+			<CircularButton size="md" href="/contact">👋 &nbsp;Connect with me</CircularButton>
 		</div>
 	{/if}
 </section>
