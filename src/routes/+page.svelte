@@ -37,7 +37,7 @@
 	{#if animate}
 		<div
 			class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
-			transition:blur={{ duration: 500 }}
+			transition:blur|local={{ duration: 500 }}
 		>
 			<div class="flex justify-center">
 				<h1
@@ -47,7 +47,7 @@
 						{#if currentHello}
 							<span
 								class="py-2 text-latte-blue dark:text-ctp-mauve text-center"
-								transition:slide={{ duration: 1000, easing: quadInOut }}
+								transition:slide|local={{ duration: 1000, easing: quadInOut }}
 								>{currentHello}! &nbsp
 							</span>
 						{/if}
@@ -65,7 +65,7 @@
 			</p>
 		</div>
 
-		<div class="flex items-center justify-center" transition:fade={{ duration: 700 }}>
+		<div class="flex items-center justify-center" transition:fade|local={{ duration: 700 }}>
 			<CircularButton size="md" href="/contact">👋 &nbsp;Connect with me</CircularButton>
 		</div>
 	{/if}
