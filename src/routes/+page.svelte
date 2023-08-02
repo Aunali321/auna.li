@@ -47,7 +47,7 @@
 						{#if currentHello}
 							<span
 								class="py-2 text-latte-blue dark:text-ctp-mauve text-center"
-								transition:slide|local={{ duration: 1000, easing: quadInOut }}
+								transition:slide={{ duration: 1000, easing: quadInOut }}
 								>{currentHello}! &nbsp
 							</span>
 						{/if}
