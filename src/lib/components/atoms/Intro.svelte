@@ -26,7 +26,7 @@
 	</h3>
 	<List class="flex flex-row justify-center items-center md:justify-start mt-4 space-x-4 list-none">
 		<Li class="flex justify-center">
-			<A href="mailto:aunvakil.aa@gmail.com">
+			<A href="mailto:cossale@revanced.app">
 				<svg
 					class="text-slate-600 dark:text-slate-300 text-2xl h-7 w-7"
 					aria-hidden="true"
