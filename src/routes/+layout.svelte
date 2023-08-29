@@ -3,15 +3,11 @@
 	import { Avatar, Navbar, NavBrand, NavLi, NavUl, NavHamburger, DarkMode } from 'flowbite-svelte';
 	import { onMount } from 'svelte';
 	import personal_logo from '../../src/assets/personal_logo.png';
+	import NavButton from '$lib/components/atoms/NavButton.svelte';
 	var hasIconLoaded = false;
 	onMount(() => {
 		hasIconLoaded = true;
 	});
-	var selectedDestination = 'home';
-
-	function updateDestination(newDestination: string) {
-		selectedDestination = newDestination;
-	}
 </script>
 
 <html lang="en">
@@ -52,25 +48,10 @@
 				activeClass="text-latte-blue dark:text-ctp-mauve underline underline-offset-8 decoration-2 font-semibold"
 				nonActiveClass="hover:text-latte-lavender dark:hover:text-ctp-mauve"
 			>
-				<NavLi href="/"><DarkMode size="lg" initialTheme="dark" /></NavLi>
-				<NavLi
-					href="/"
-					active={selectedDestination === 'home'}
-					on:click={() => updateDestination('home')}
-					>Home
-				</NavLi>
-				<NavLi
-					href="/about"
-					active={selectedDestination === 'about'}
-					on:click={() => updateDestination('about')}
-					>About
-				</NavLi>
-				<NavLi
-					href="/contact"
-					active={selectedDestination === 'contact'}
-					on:click={() => updateDestination('contact')}
-					>Contact
-				</NavLi>
+				<NavLi><DarkMode size="lg" initialTheme="dark" /></NavLi>
+				<NavButton href="/">Home</NavButton>
+				<NavButton href="/about">About</NavButton>
+				<NavButton href="/contact">Contact</NavButton>
 			</NavUl>
 		</Navbar>
 
