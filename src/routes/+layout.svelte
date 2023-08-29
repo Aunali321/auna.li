@@ -39,16 +39,21 @@
 						/>
 					{/if}
 				</NavBrand>
-				<NavHamburger on:click={toggle} />
+				<div class="end-nav flex list-none">
+					<div class="block md:hidden">
+						<NavLi><DarkMode size="lg" initialTheme="dark" /></NavLi>
+					</div>
+					<NavHamburger on:click={toggle} />
+				</div>
 			</div>
 
 			<NavUl
-				ulClass="text-xl md:text-2xl flex space-x-8 justify-center items-center flex-col my-3 md:m-0 md:flex-row"
+				ulClass="text-xl md:text-2xl flex space-x-8 space-y-4 md:space-y-0 pb-4 justify-center items-center flex-col my-3 md:m-0 md:flex-row"
 				{hidden}
 				activeClass="text-latte-blue dark:text-ctp-mauve underline underline-offset-8 decoration-2 font-semibold"
 				nonActiveClass="hover:text-latte-lavender dark:hover:text-ctp-mauve"
 			>
-				<NavLi><DarkMode size="lg" initialTheme="dark" /></NavLi>
+				<div class="hidden md:block"><NavLi><DarkMode size="lg" initialTheme="dark" /></NavLi></div>
 				<NavButton href="/">Home</NavButton>
 				<NavButton href="/about">About</NavButton>
 				<NavButton href="/contact">Contact</NavButton>
