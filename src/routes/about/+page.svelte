@@ -5,11 +5,14 @@
 	import ExperienceCards from '$lib/components/ExperienceCards.svelte';
 	import ProjectCards from '$lib/components/ProjectCards.svelte';
 	import Heading from '$lib/components/atoms/Heading.svelte';
+	import { onMount } from 'svelte';
 
 	// disable right clicking unless its <a> tag
-	document.addEventListener('contextmenu', (event) => {
-		// @ts-ignore
-		if (event.target.tagName !== 'A') event.preventDefault();
+	onMount(() => {
+		document.addEventListener('contextmenu', (event) => {
+			// @ts-ignore
+			if (event.target.tagName !== 'A') event.preventDefault();
+		});
 	});
 </script>
 
