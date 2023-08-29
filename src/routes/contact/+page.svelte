@@ -1,10 +1,9 @@
 <script lang="ts">
-	import CircularButton from '$lib/components/atoms/CircularButton.svelte';
 	import ContactHeading from '$lib/components/atoms/ContactHeading.svelte';
 	import ContactCard from '$lib/components/ContactCard.svelte';
 </script>
 
-<section class="h-full py-12 mx-20 latte dark:bg-gray-900 select-none dark:mocha">
+<section class="h-full py-4 md:py-12 mx-16 md:mx-20 latte dark:bg-gray-900 select-none dark:mocha">
 	<ContactHeading />
 
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -37,7 +36,7 @@
 			href="https://discord.com/users/164673069212893184"
 			ctaText="Message"
 		>
-		<i class="text-5xl fa-brands fa-discord text-gray-900 dark:text-gray-300" />
+			<i class="text-5xl fa-brands fa-discord text-gray-900 dark:text-gray-300" />
 		</ContactCard>
 
 		<ContactCard
@@ -46,7 +45,7 @@
 			href="https://t.me/AunAli121"
 			ctaText="Message"
 		>
-		<i class="text-5xl fa-brands fa-telegram text-gray-900 dark:text-gray-300" />
+			<i class="text-5xl fa-brands fa-telegram text-gray-900 dark:text-gray-300" />
 		</ContactCard>
 
 		<ContactCard
@@ -55,8 +54,7 @@
 			href="https://github.com/Aunali321"
 			ctaText="Follow"
 		>
-		<i class="text-5xl fa-brands fa-github text-gray-900 dark:text-gray-300" />
+			<i class="text-5xl fa-brands fa-github text-gray-900 dark:text-gray-300" />
 		</ContactCard>
-
 	</div>
 </section>
