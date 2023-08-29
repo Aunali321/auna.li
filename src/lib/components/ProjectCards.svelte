@@ -26,7 +26,7 @@
 		locally on your device, makes the required changes using our in-house
 		<AnimatedLink href="https://github.com/revanced/revanced-patcher">patcher library</AnimatedLink>
 		and then assembles it back into an APK again. You can find it on
-		<AnimatedLink href="https://github.com/revanced/revanced-manager">GitHub</AnimatedLink>
+		<AnimatedLink href="https://github.com/revanced/revanced-manager">GitHub.</AnimatedLink>
 	</ItemCard>
 	<ItemCard
 		timespan="February 2022"

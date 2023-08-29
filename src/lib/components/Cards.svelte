@@ -67,19 +67,17 @@
 		class="flex items-center mt-5 hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
 	>
 		<img
-			class="w-12 h-12 mr-2 rounded-full"
-			src="https://raw.githubusercontent.com/revanced/revanced-branding/8914e9473afbefd2fa3245ed99cfe2b66e959e92/assets/revanced-logo/revanced-logo-round.svg"
-			alt="Cossale"
+			class="w-12 h-12 mr-3 rounded-full"
+			src="https://avatars.githubusercontent.com/u/101597779?s=200&v=4"
+			alt="ReVanced"
 		/>
 		<div>
 			<h4
-				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender pointer-events-none"
+				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 			>
 				ReVanced
 			</h4>
-			<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
-				Core team member
-			</p>
+			<p class="text-sm tracking-tight text-gray-900 dark:text-white">Core team member</p>
 		</div>
 	</a>
 
@@ -88,19 +86,17 @@
 		class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
 	>
 		<img
-			class="w-12 h-12 mr-2 rounded-full"
+			class="w-12 h-12 mr-3 rounded-full"
 			src="https://avatars.githubusercontent.com/u/122711804?s=200&v=4"
-			alt="Cossale"
+			alt="Venic"
 		/>
 		<div>
 			<h4
-				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender pointer-events-none"
+				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 			>
 				Venic
 			</h4>
-			<p class="text-sm font-normal tracking-tight text-gray-900 dark:text-white">
-				Core team member
-			</p>
+			<p class="text-sm tracking-tight text-gray-900 dark:text-white">Core team member</p>
 		</div>
 	</a>
 </Card>
@@ -124,22 +120,22 @@
 		</svg>
 		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Education</h3>
 	</div>
-	<div
+	<a
+		href="https://maktabahjafariyah.org"
 		class="items-center mt-5 hover:scale-[1.02] transition-transform ease-in-out duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 hover:rounded-md cursor-pointer"
 	>
-		<a
-			href="https://maktabahjafariyah.org"
+		<div
 			class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
 		>
 			Bachelor of Computer Applications
-		</a>
+		</div>
 		<p class="text-sm mt-1 font-normal tracking-tight text-gray-900 dark:text-white">
 			Maktabah Jafariyah Knowledge & Research Academy
 		</p>
 		<p class="text-sm mt-1 font-normal tracking-tight text-gray-700 dark:text-gray-300">
 			2021 - 2024
 		</p>
-	</div>
+	</a>
 </Card>
 <!-- skills card -->
 <Card class="mt-5 mx-auto md:mx-0">

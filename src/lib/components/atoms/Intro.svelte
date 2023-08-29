@@ -56,11 +56,10 @@
 		</Li>
 	</List>
 	<p class="mt-4 text-lg font-normal tracking-tight text-slate-500 dark:text-slate-200">
-		A open-source developer from India. I'm a self-taught software developer who's very passionate
-		about reverse engineering.
+		A 20 year old open-source developer from India. I'm very passionate about flutter, reverse
+		engineering, open source,and all sorts of music.
 	</p>
 	<p class="mt-4 text-md tracking-tight text-slate-500 dark:text-slate-200">
-		My interests include Reverse Engineering, P2P File transfer protocol, Web scraping, Bash
-		Scripting, Automation.
+		My interests include Reverse Engineering, Web scraping, Bash Scripting, and Automation.
 	</p>
 </div>
