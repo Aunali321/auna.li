@@ -61,7 +61,7 @@
 			<p
 				class="mb-8 text-2xl font-normal md:text-3xl lg:text-4xl sm:px-16 lg:px-48 dark:text-gray-200"
 			>
-				a Web & Flutter developer, based in India
+				a Web & Mobile developer, based in India
 			</p>
 		</div>
 
