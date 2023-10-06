@@ -3,6 +3,7 @@
 	import { quadInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import CircularButton from '$lib/components/atoms/CircularButton.svelte';
+	import { user } from '../data/Data';
 	let animate = false;
 
 	const helloInDifferentLanguages = [
@@ -54,14 +55,14 @@
 					{/key}
 				</h1>
 				<h1 class="mb-4 text-4xl py-2 font-bold md:text-6xl lg:text-8xl dark:text-white sticky">
-					I'm Aunali K.
+					I'm {user.name}
 				</h1>
 			</div>
 
 			<p
 				class="mb-8 text-2xl font-normal md:text-3xl lg:text-4xl sm:px-16 lg:px-48 dark:text-gray-200"
 			>
-				a Web & Mobile developer, based in India
+				{user.role}
 			</p>
 		</div>
 

@@ -1,49 +1,11 @@
 <script>
 	import { Card, Img } from 'flowbite-svelte';
-
-	let baseIconsURL = 'https://cdn.simpleicons.org/';
-	let skillsWithIcons = [
-		{
-			name: 'Flutter',
-			icon: `${baseIconsURL}/flutter`,
-			site: 'https://flutter.dev'
-		},
-		{
-			name: 'Dart',
-			icon: `${baseIconsURL}/dart`,
-			site: 'https://dart.dev'
-		},
-		{
-			name: 'Kotlin',
-			icon: `${baseIconsURL}/kotlin`,
-			site: 'https://kotlinlang.org'
-		},
-		{
-			name: 'Javascript',
-			icon: `${baseIconsURL}/javascript`,
-			site: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-		},
-		{
-			name: 'PHP',
-			icon: `${baseIconsURL}/php`,
-			site: 'https://www.php.net'
-		},
-		{
-			name: 'TailwindCSS',
-			icon: `${baseIconsURL}/tailwindcss`,
-			site: 'https://tailwindcss.com'
-		},
-		{
-			name: 'Jetpack Compose',
-			icon: `${baseIconsURL}/jetpackcompose`,
-			site: 'https://developer.android.com/jetpack/compose'
-		}
-	];
+	import { user } from '../../data/Data';
 </script>
 
 <!-- Experience Card -->
 <Card class="m-0 mt-10 p-5 mx-auto md:mx-0">
-	<div class="heading flex">
+	<div class="heading flex mb-5">
 		<svg
 			class="w-6 h-6 mr-2 text-ctp-mauve"
 			aria-hidden="true"
@@ -62,44 +24,28 @@
 		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Organizations</h3>
 	</div>
 
-	<a
-		href="https://revanced.app"
-		class="flex items-center mt-5 hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
-	>
-		<img
-			class="w-12 h-12 mr-3 rounded-full"
-			src="https://avatars.githubusercontent.com/u/101597779?s=200&v=4"
-			alt="ReVanced"
-		/>
-		<div>
-			<h4
-				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-			>
-				ReVanced
-			</h4>
-			<p class="text-sm tracking-tight text-gray-900 dark:text-white">Core team member</p>
-		</div>
-	</a>
-
-	<a
-		href="https://venic.app"
-		class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
-	>
-		<img
-			class="w-12 h-12 mr-3 rounded-full"
-			src="https://avatars.githubusercontent.com/u/122711804?s=200&v=4"
-			alt="Venic"
-		/>
-		<div>
-			<h4
-				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
-			>
-				Venic
-			</h4>
-			<p class="text-sm tracking-tight text-gray-900 dark:text-white">Core team member</p>
-		</div>
-	</a>
+	{#each user.orgs as organization}
+		<a
+			href={organization.href}
+			class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
+		>
+			<Img
+				src={organization.logo}
+				alt={organization.name + ' logo'}
+				class="w-12 h-12 mr-3 rounded-full"
+			/>
+			<div>
+				<h4
+					class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
+				>
+					{organization.name}
+				</h4>
+				<p class="text-sm tracking-tight text-gray-900 dark:text-white">{organization.role}</p>
+			</div>
+		</a>
+	{/each}
 </Card>
+
 <!-- Education Card -->
 <Card class="mt-5 mx-auto md:mx-0">
 	<div class="heading flex">
@@ -120,23 +66,28 @@
 		</svg>
 		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Education</h3>
 	</div>
-	<a
-		href="https://maktabahjafariyah.org"
-		class="items-center mt-5 hover:scale-[1.02] transition-transform ease-in-out duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 hover:rounded-md cursor-pointer"
-	>
-		<div
-			class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
+
+	<!-- repeat for each education in user.education -->
+	{#each user.education as education}
+		<a
+			href={education.href}
+			class="items-center mt-5 hover:scale-[1.02] transition-transform ease-in-out duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 hover:rounded-md cursor-pointer"
 		>
-			Bachelor of Computer Applications
-		</div>
-		<p class="text-sm mt-1 font-normal tracking-tight text-gray-900 dark:text-white">
-			Maktabah Jafariyah Knowledge & Research Academy
-		</p>
-		<p class="text-sm mt-1 font-normal tracking-tight text-gray-700 dark:text-gray-300">
-			2021 - 2024
-		</p>
-	</a>
+			<div
+				class="text-lg font-medium tracking-tight text-gray-900 dark:text-white hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender"
+			>
+				{education.name}
+			</div>
+			<p class="text-sm mt-1 font-normal tracking-tight text-gray-900 dark:text-white">
+				{education.school}
+			</p>
+			<p class="text-sm mt-1 font-normal tracking-tight text-gray-700 dark:text-gray-300">
+				{education.timespan}
+			</p>
+		</a>
+	{/each}
 </Card>
+
 <!-- skills card -->
 <Card class="mt-5 mx-auto md:mx-0">
 	<div class="heading flex">
@@ -157,9 +108,10 @@
 		</svg>
 		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Skills</h3>
 	</div>
+
 	<div class="items-center mt-5">
 		<!-- map skills and icons -->
-		{#each skillsWithIcons as skill}
+		{#each user.skills as skill}
 			<a
 				href={skill.site}
 				class="flex space-x-3 items-center hover:bg-gray-100 dark:hover:bg-gray-600 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"

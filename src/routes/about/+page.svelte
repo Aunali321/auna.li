@@ -1,6 +1,6 @@
 <script>
 	import Cards from '$lib/components/Cards.svelte';
-	import Intro from '$lib/components/atoms/Intro.svelte';
+	import Intro from '$lib/components/Intro.svelte';
 	import BottomLine from '$lib/components/atoms/BottomLine.svelte';
 	import ExperienceCards from '$lib/components/ExperienceCards.svelte';
 	import ProjectCards from '$lib/components/ProjectCards.svelte';
