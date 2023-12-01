@@ -12,10 +12,10 @@
 
 <a
 	{href}
-	class="container mx-auto flex flex-col items-center text-center md:text-left md:inline-block md:max-w-max scale-[0.98] relative p-4 md:mx-0 w-full hover:scale-[1.001] md:hover:scale-[1.02] transition-transform ease-in-out duration-200 dark:hover:bg-gray-800 hover:bg-gray-200 hover:rounded-lg"
+	class="container mx-auto flex flex-col items-center text-center md:text-left md:inline-block md:max-w-max scale-[0.98] relative p-4 md:mx-0 w-full hover:scale-[1.001] md:hover:scale-[1.02] transition-transform ease-in-out duration-200 dark:hover:bg-gray-800 hover:bg-gray-100 hover:rounded-lg"
 >
 	<header
-		class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500 sm:col-span-2"
+		class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-500 sm:col-span-2"
 	>
 		{timespan}
 	</header>
@@ -29,14 +29,14 @@
 
 			{#if short_desc}
 				<span
-					class="mb-2 mt-1 text-xs font-semibold text-slate-500 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender hidden md:inline"
+					class="mb-2 mt-1 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender hidden md:inline"
 				>
 					-</span
 				>
 			{/if}
 
 			<span
-				class="mb-2 mt-1 text-xs font-semibold text-slate-500 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender block md:inline"
+				class="mb-2 mt-1 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-latte-lavender dark:hover:text-mocha-lavender block md:inline"
 			>
 				{short_desc}</span
 			><span
@@ -45,7 +45,7 @@
 			>
 		</a></a
 	>
-	<p class="mt-2 font-sans text-sm leading-normal text-slate-500 dark:text-slate-300">
+	<p class="mt-2 font-sans text-sm leading-normal text-slate-700 dark:text-slate-300">
 		<slot />
 	</p>
 	<ul class="mt-2 flex flex-wrap">

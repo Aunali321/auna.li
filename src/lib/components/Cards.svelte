@@ -7,7 +7,7 @@
 <Card class="m-0 mt-10 p-5 mx-auto md:mx-0">
 	<div class="heading flex mb-5">
 		<svg
-			class="w-6 h-6 mr-2 text-ctp-mauve"
+			class="w-6 h-6 mr-2 text-latte-blue dark:text-ctp-mauve"
 			aria-hidden="true"
 			fill="none"
 			stroke="currentColor"
@@ -21,7 +21,7 @@
 				stroke-linejoin="round"
 			/>
 		</svg>
-		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Organizations</h3>
+		<h3 class="tracking-tight font-semibold text-latte-blue dark:text-ctp-mauve">Organizations</h3>
 	</div>
 
 	{#each user.orgs as organization}
@@ -50,7 +50,7 @@
 <Card class="mt-5 mx-auto md:mx-0">
 	<div class="heading flex">
 		<svg
-			class="w-6 h-6 mr-2 text-ctp-mauve"
+			class="w-6 h-6 mr-2 text-latte-blue dark:text-ctp-mauve"
 			aria-hidden="true"
 			fill="none"
 			stroke="currentColor"
@@ -64,7 +64,7 @@
 				stroke-linejoin="round"
 			/>
 		</svg>
-		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Education</h3>
+		<h3 class="tracking-tight font-semibold text-latte-blue dark:text-ctp-mauve">Education</h3>
 	</div>
 
 	<!-- repeat for each education in user.education -->
@@ -92,7 +92,7 @@
 <Card class="mt-5 mx-auto md:mx-0">
 	<div class="heading flex">
 		<svg
-			class="w-6 h-6 mr-2 text-ctp-mauve"
+			class="w-6 h-6 mr-2 text-latte-blue dark:text-ctp-mauve"
 			aria-hidden="true"
 			fill="none"
 			stroke="currentColor"
@@ -106,7 +106,7 @@
 				stroke-linejoin="round"
 			/>
 		</svg>
-		<h3 class="tracking-tight font-semibold text-gray-900 dark:text-ctp-mauve">Skills</h3>
+		<h3 class="tracking-tight font-semibold text-latte-blue dark:text-ctp-mauve">Skills</h3>
 	</div>
 
 	<div class="items-center mt-5">
