@@ -15,7 +15,7 @@
 	class="container mx-auto flex flex-col items-center text-center md:text-left md:inline-block md:max-w-max scale-[0.98] relative p-4 md:mx-0 w-full hover:scale-[1.001] md:hover:scale-[1.02] transition-transform ease-in-out duration-200 dark:hover:bg-gray-800 hover:bg-gray-100 hover:rounded-lg"
 >
 	<header
-		class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-500 sm:col-span-2"
+		class="mb-2 mt-1 text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-400/95 sm:col-span-2"
 	>
 		{timespan}
 	</header>

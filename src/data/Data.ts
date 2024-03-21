@@ -70,10 +70,10 @@ let baseIconsURL = 'https://cdn.simpleicons.org/';
 export let user: User = {
     name: "Aunali K.",
     nameWithoutSuffix: "Aunali",
-    role: "a Web & Mobile developer, based in India",
+    role: "Technologist with a passion for building.",
     nickname: "Cossale",
     ed: "Computer Science Student",
-    about: "A 20 year old open-source developer from India. I'm very passionate about flutter, reverse engineering, open source,and all sorts of music. <br /> <br /> My interests include Reverse Engineering, Web scraping, Bash Scripting, and Automation.",
+    about: "A 20 year old developer from India. I'm very passionate about flutter, reverse engineering, open source and all sorts of music. <br /> <br /> My interests include Machine learning, Reverse engineering, Web scraping, Bash scripting, and Automation.",
     orgs: [
         {
             name: "ReVanced",
@@ -82,10 +82,10 @@ export let user: User = {
             href: "https://revanced.app"
         },
         {
-            name: "Venic",
-            role: "Core team member",
-            logo: "https://avatars.githubusercontent.com/u/122711804?s=200&v=4",
-            href: "https://venic.app"
+            name: "MantiQ Infotech",
+            role: "Software Developer Intern",
+            logo: "https://mantiqinfotech.com/wp-content/uploads/2023/03/MTIQ-300x166.png",
+            href: "https://mantiqinfotech.com"
         },
     ],
     education: [
@@ -93,7 +93,7 @@ export let user: User = {
             name: "Bachelor of Computer Applications",
             href: "https://maktabahjafariyah.org/",
             school: "Maktabah Jafariyah Knowledge & Research Academy",
-            timespan: "2021 - 2024"
+            timespan: "September 2021 - March 2024"
         }
     ],
     skills: [
@@ -200,11 +200,34 @@ export let user: User = {
                     url: 'https://github.com/revanced'
                 }
             ],
-            description: `
-           • Collaborated with a team of skilled developers on an open-source project to create ReVanced, a flexible Android library used to modify code in other apps to add or remove features <br /> <br />
-• Engineered an Android app to streamline installation for 150K+ Reddit subscribers, 100K+ Discord members, 50K+ Telegram users, and 15K+ GitHub followers <br /> <br />
-• Combined expertise to develop an adaptable framework for endless customization, benefiting both developers and consumers <br /> <br />
-• Showcased abilities to work collaboratively within a professional team to deliver innovative results`,
+            description: `• Worked with a globally distributed team of 15 developers to build ReVanced, an open-source Android modification framework empowering users to customize apps to suit their needs. <br > <br >
+                    • I helped spearhead overall architecture, design, and roadmapping - devising an  adaptable core to enable endless customizations for apps built on Dalvik like YouTube. I also directly contributed extensive code across the codebase. <br > <br >
+                    • I led development of the ReVanced Manager app installed by over 170K users. The app streamlined installations and made core functionality easily accessible. <br > <br >
+                    • Initially adopted by a few hundred users, ReVanced gathered incredible traction on platforms like Reddit, Discord and Telegram from folks who really liked what we built. <br > <br >
+                    • As installs grew exponentially to 170,000+, I took on expanded duties - overseeing roadmap priorities, debugging complex issues, liaising with user communities, and ensuring stability through rigorous testing. <br > <br >
+                    • The project gave me hands-on experience on how coordinated remote teams can build delightful products loved by users globally. Debugging performance problems taught me how to approach issues methodically. Ultimately, the ability to solve real user problems at scale was extremely fulfilling.`,
+        },
+        {
+            role: "Software Developer Intern · MantiQ Infotech",
+            href: "https://mantiqinfotech.com/",
+            timespan: "September 2023 - March 2024",
+            external_links: [
+                {
+                    url: 'https://mantiqinfotech.com',
+                    label: 'Website'
+                },
+                {
+                    url: 'https://sentiraai.com',
+                    label: 'SentiraAI'
+                },
+            ],
+            description: `During my 6-month internship at MantiQ Infotech, I lead the development of <a class="dark:text-mocha-lavender text-latte-lavender" href="https://sentiraai.com"> SentiraAI </a> - a platform leveraging AI for audio/video transcription and text summarization. <br > <br >
+            • Built the core Node.js/Express API integrating AI services like Deepgram and Cohere for transcription and summarization capabilities. Implemented authentication using API keys and session management with Supabase. <br > <br >
+            • Developed the SentiraAI web app using SvelteKit and TailwindCSS, providing a user-friendly interface for file uploads, viewing transcripts/summaries, and account management. Integrated Stripe for payment processing. <br > <br >
+            • Developed Telegram and Discord bots connected to the SentiraAI API, enabling users to access transcription and summarization features within their messaging apps. <br > <br >
+            • Created cross-browser extensions (Chrome, Firefox, Safari) using JavaScript, allowing users to transcribe and summarize web content directly. <br > <br >
+            • Optimized performance through caching, error handling, and file cleanup mechanisms. Documented the system using VitePress. <br > <br >
+            • The project exposed me to full-stack development, third-party integrations, and building user experiences across multiple platforms using technologies like Node.js, SvelteKit, AI APIs, and messaging platform APIs.`,
         },
     ],
     contact_links: [
