@@ -32,7 +32,7 @@
 			<Img
 				src={organization.logo}
 				alt={organization.name + ' logo'}
-				class="w-12 h-12 mr-3 rounded-full"
+				class="w-12 h-12 mr-3 rounded-full dark:bg-gray-200"
 			/>
 			<div>
 				<h4

@@ -64,7 +64,7 @@ interface ContactLink {
     icon: string
 }
 
-let baseIconsURL = 'https://cdn.simpleicons.org/';
+let baseIconsURL = 'https://cdn.simpleicons.org';
 
 
 export let user: User = {
@@ -82,10 +82,10 @@ export let user: User = {
             href: "https://revanced.app"
         },
         {
-            name: "MantiQ Infotech",
-            role: "Software Developer Intern",
-            logo: "https://mantiqinfotech.com/wp-content/uploads/2023/03/MTIQ-300x166.png",
-            href: "https://mantiqinfotech.com"
+            name: "Invest Brains",
+            role: "AI/ML Engineer",
+            logo: "https://assets-global.website-files.com/6548eec3020d3ae5296193cc/6548f7b6e5e089a5b706c198_4c80a7a7aa69339a083019426d2212b0.gif",
+            href: "https://investbrains.net"
         },
     ],
     education: [
@@ -98,14 +98,19 @@ export let user: User = {
     ],
     skills: [
         {
+            name: 'Python',
+            icon: `${baseIconsURL}/python`,
+            site: 'https://python.org'
+        },
+        {
+            name: 'Svelte',
+            icon: `${baseIconsURL}/svelte`,
+            site: 'https://svelte.dev'
+        },
+        {
             name: 'Flutter',
             icon: `${baseIconsURL}/flutter`,
             site: 'https://flutter.dev'
-        },
-        {
-            name: 'Dart',
-            icon: `${baseIconsURL}/dart`,
-            site: 'https://dart.dev'
         },
         {
             name: 'Kotlin',
@@ -123,17 +128,26 @@ export let user: User = {
             site: 'https://www.php.net'
         },
         {
-            name: 'TailwindCSS',
-            icon: `${baseIconsURL}/tailwindcss`,
-            site: 'https://tailwindcss.com'
-        },
-        {
             name: 'Jetpack Compose',
             icon: `${baseIconsURL}/jetpackcompose`,
             site: 'https://developer.android.com/jetpack/compose'
         }
     ],
     projects: [
+        {
+            role: "SentiraAI",
+            href: "https://sentiraai.com",
+            timespan: "September 2023 - March 2024",
+            short_description: "AI for audio/video transcription and text summarization.",
+            external_links: [
+                {
+                    url: 'https://sentiraai.com',
+                    label: 'SentiraAI'
+                },
+            ],
+            tags: ["Node.js", "Express", "SvelteKit", "Supabase", "TailwindCSS",],
+            description: "SentiraAI is a platform leveraging AI for audio/video transcription and text summarization. It is built using Node.js/Express for the API, SvelteKit for the web app, and integrates AI services like Deepgram and Cohere for transcription and summarization capabilities. It also includes authentication using API keys and session management with Supabase. It has a user-friendly interface for file uploads, viewing transcripts/summaries, and account management. It also includes Stripe for payment processing. It has Telegram and Discord bots connected to the SentiraAI API, enabling users to access transcription and summarization features within their messaging apps. It also includes cross-browser extensions (Chrome, Firefox, Safari) using JavaScript, allowing users to transcribe and summarize web content directly. It is documented using VitePress.",
+        },
         {
             role: "ReVanced Manager",
             href: "https://github.com/revanced/revanced-manager",
@@ -208,26 +222,20 @@ export let user: User = {
                     • The project gave me hands-on experience on how coordinated remote teams can build delightful products loved by users globally. Debugging performance problems taught me how to approach issues methodically. Ultimately, the ability to solve real user problems at scale was extremely fulfilling.`,
         },
         {
-            role: "Software Developer Intern · MantiQ Infotech",
-            href: "https://mantiqinfotech.com/",
-            timespan: "September 2023 - March 2024",
+            role: "AI/ML Engineer · Invest Brains",
+            href: "https://investbrains.net",
+            timespan: "June 2024 - Present",
             external_links: [
                 {
-                    url: 'https://mantiqinfotech.com',
+                    url: 'https://investbrains.net',
                     label: 'Website'
                 },
-                {
-                    url: 'https://sentiraai.com',
-                    label: 'SentiraAI'
-                },
             ],
-            description: `During my 6-month internship at MantiQ Infotech, I lead the development of <a class="dark:text-mocha-lavender text-latte-lavender" href="https://sentiraai.com"> SentiraAI </a> - a platform leveraging AI for audio/video transcription and text summarization. <br > <br >
-            • Built the core Node.js/Express API integrating AI services like Deepgram and Cohere for transcription and summarization capabilities. Implemented authentication using API keys and session management with Supabase. <br > <br >
-            • Developed the SentiraAI web app using SvelteKit and TailwindCSS, providing a user-friendly interface for file uploads, viewing transcripts/summaries, and account management. Integrated Stripe for payment processing. <br > <br >
-            • Developed Telegram and Discord bots connected to the SentiraAI API, enabling users to access transcription and summarization features within their messaging apps. <br > <br >
-            • Created cross-browser extensions (Chrome, Firefox, Safari) using JavaScript, allowing users to transcribe and summarize web content directly. <br > <br >
-            • Optimized performance through caching, error handling, and file cleanup mechanisms. Documented the system using VitePress. <br > <br >
-            • The project exposed me to full-stack development, third-party integrations, and building user experiences across multiple platforms using technologies like Node.js, SvelteKit, AI APIs, and messaging platform APIs.`,
+            description: `
+                • Fine-tuned LLMs for specific tasks like role-play, question-answering. <br > <br >
+                • Fine-tuned diffusion models like Stable Diffusion for image generation on custom datasets. <br > <br >
+                • Developed a custom dataset for image generation using diffusion models. <br > <br >
+                • And planning to work on more projects in the future!`
         },
     ],
     contact_links: [
