@@ -12,7 +12,7 @@
 			role={experience.role}
 			short_desc=""
 			external_links={experience.external_links}
-			tags={[]}
+			tags={experience.tags}
 		>
 			{@html experience.description}
 		</ItemCard>
