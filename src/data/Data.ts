@@ -77,10 +77,10 @@ export let user: User = {
     about: "A 21-year-old developer from India with a passion for AI/ML, product development, and open source. My expertise spans machine learning, natural language processing, and building AI solutions. I'm constantly exploring new technologies and methodologies in the rapidly evolving field of AI, with a keen interest in developing products that solve real-world problems. Beyond AI, I enjoy reverse engineering, web scraping, scripting, and gaming.",
     orgs: [
         {
-            name: "Invest Brains",
+            name: "New Media Services",
             role: "AI/ML Engineer",
-            logo: "https://assets-global.website-files.com/6548eec3020d3ae5296193cc/6548f7b6e5e089a5b706c198_4c80a7a7aa69339a083019426d2212b0.gif",
-            href: "https://investbrains.net"
+            logo: "https://scontent.famd18-1.fna.fbcdn.net/v/t39.30808-6/381142632_692704966211337_3709953787732150214_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=avsnKlwwuMUQ7kNvgEC2csT&_nc_oc=AdhiBz-8qPy2MMzh4dzCGonMY7Z6KkLOXi4FJeGPF_Djn-38Q2fU1AhKaghtwvSFLCg&_nc_zt=23&_nc_ht=scontent.famd18-1.fna&_nc_gid=A7yMrFkHjPM8zKL-le6Hn1b&oh=00_AYDoN4E-Z75C8BLT8XgNdqMtvPrRPV2bhAg19OOwJIT_BA&oe=67B14E2C",
+            href: "https://newmediaservices.com.au"
         },
         {
             name: "ReVanced",
@@ -142,18 +142,26 @@ export let user: User = {
     ],
     projects: [
         {
-            role: "SentiraAI",
-            href: "https://sentiraai.com",
-            timespan: "September 2023 - Present",
-            short_description: "AI for audio/video transcription and text summarization.",
+            role: "Kepler Systems",
+            href: "https://kepler.systems",
+            timespan: "February 2025 - Present",
+            short_description: "Building the future of AI through shared datasets, and open-source models.",
             external_links: [
                 {
-                    url: 'https://sentiraai.com',
-                    label: 'SentiraAI'
+                    url: 'https://kepler.systems',
+                    label: 'Website'
                 },
+                {
+                    url: 'https://huggingface.co/keplersystems',
+                    label: 'Hugging Face'
+                },
+                {
+                    url: 'https://x.com/keplersystems',
+                    label: 'Twitter / X'
+                }
             ],
-            tags: ["Node.js", "Express", "SvelteKit", "Supabase", "TailwindCSS",],
-            description: "SentiraAI is a platform leveraging AI for audio/video transcription and text summarization. It is built using Node.js/Express for the API, SvelteKit for the web app, and integrates AI services like Deepgram and Cohere for transcription and summarization capabilities. It also includes authentication using API keys and session management with Supabase. It has a user-friendly interface for file uploads, viewing transcripts/summaries, and account management. It also includes Stripe for payment processing. It has Telegram and Discord bots connected to the SentiraAI API, enabling users to access transcription and summarization features within their messaging apps. It also includes cross-browser extensions (Chrome, Firefox, Safari) using JavaScript, allowing users to transcribe and summarize web content directly. It is documented using VitePress.",
+            tags: ["SvelteKit", "TailwindCSS"],
+            description: "Kepler Systems is to contribute to fundamental AI research and development across various domains. Current projects within Kepler Systems include:<br> <strong>Poetry-Llama</strong>: State-of-the-Art Urdu Poetry Model: Our most recent project is Poetry-Llama, a cutting-edge LLM specifically fine-tuned for understanding and generating Urdu poetry.This 70-billion parameter model is trained on a diverse corpus of Urdu poetry and is openly available under the Llama license on Hugging Face. <br><br> <strong>Open Datasets for Urdu Poetry Research</strong>: Recognizing the importance of quality data in AI research, Kepler Systems curates and shares valuable datasets: <br> <strong>UrduShers-10k</strong>: A meticulously curated collection of 10,000 classical Urdu poetry couplets(shers) from diverse poets and eras, ensuring high quality and cultural representation.This dataset is licensed under CC BY-SA 4.0 for open use in research and creative projects. <br><strong>UrduGhazals-25k</strong>: A comprehensive dataset featuring 25,000 complete Urdu ghazals, encompassing a wide range of poets, eras, and dialects.This resource is also released under the CC BY-SA 4.0 license to promote open access and collaboration.",
         },
         {
             role: "ReVanced Manager",
@@ -173,40 +181,26 @@ export let user: User = {
             tags: ["Flutter", "Dart", "Kotlin"],
             description: "The ReVanced Manager is an Android application that allows you to modify any Dalvik Android application to add, remove and/or modify existing functionality. It dissassembles the APK locally on your device, makes the required changes using our in-house <a class='relative inline-flex items-center text-sm font-medium dark:text-mocha-lavender text-latte-lavender transition duration-100 hover:scale-[1.03] hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender' href='https://github.com/revanced/revanced-patcher'>patcher library</a> and then assembles it back into an APK again. You can find it on <a class='relative inline-flex items-center text-sm font-medium dark:text-mocha-lavender text-latte-lavender transition duration-100 hover:scale-[1.03] hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender' href='https://github.com/revanced/revanced-manager'>GitHub.</a>",
         },
-        {
-            role: "NotesCentral",
-            href: "https://github.com/Aunali321/NotesCentral",
-            timespan: "February 2022",
-            short_description: "a practicals sharing app for students.",
-            external_links: [
-                {
-                    url: 'https://github.com/Aunali321/NotesCentral',
-                    label: 'NotesCentral'
-                }
-            ],
-            tags: ['PHP', 'MySQL', 'TailwindCSS'],
-            description: "NotesCentral is a practicals sharing app for students primarily for code. It allows students to upload their practicals and share them with other students. It has syntax highlighting for code for popular programming languages. It includes authentication and authorization. It is styled using TailwindCSS and is built using PHP and MySQL.",
-        }
     ],
     experience: [
         {
-            role: "AI/ML Engineer · Invest Brains",
-            href: "https://investbrains.net",
+            role: "AI/ML Engineer · New Media Services (Formerly InvestBrains)",
+            href: "https://newmediaservices.com.au/",
             timespan: "June 2024 - Present",
             external_links: [
                 {
-                    url: 'https://investbrains.net',
+                    url: 'https://newmediaservices.com.au',
                     label: 'Website'
                 },
             ],
             description: `
-            Within 2 months into joining InvestBrains, I have been involved in a variety of projects, including: <br > <br >
-                • Fine-tuned Large Language Models (LLMs) for specialized tasks including role-play scenarios and question-answering systems. This work improved model performance for specific use cases. <br > <br >
-                • Worked on fine-tuning diffusion models, particularly Stable Diffusion, for custom image generation tasks. This involved creating and curating datasets tailored to our project requirements. <br > <br >
-                • Implemented Direct Preference Optimization (DPO) techniques to better align models with user preferences, resulting in improved output quality and user satisfaction. <br > <br >    
-                • Developed and deployed a moderation API utilizing vision models to detect harmful content, addressing important safety concerns in AI applications. <br > <br >
-                • Created and maintained automation scripts for LLM hosting, benchmarking, and synthetic data generation. These efforts streamlined our development processes and improved team efficiency. <br > <br >
-                • Engaged in ongoing learning and application of emerging AI techniques, staying current with advancements in the field.`,
+            • <strong>Content Moderation Leadership:</strong> Led the development and deployment of advanced moderation solutions, utilizing vision models to create and maintain a robust Moderation API. This initiative proactively addressed harmful content across platforms, ensuring user safety and responsible AI application. <br><br>
+            • <strong>Large Language Model (LLM) Optimization & Fine-tuning:</strong> Specialized in fine-tuning and optimizing LLMs for diverse applications, including creating engaging role-play scenarios and developing effective question-answering systems. Work focused on significantly improving model performance and accuracy for specific use cases relevant to content generation and user interaction. <br><br>
+            • <strong>Reinforcement Learning for Model Alignment:</strong> Implemented Reinforcement Learning techniques, including Direct Preference Optimization (DPO), to refine LLM outputs and align them with user preferences. This resulted in enhanced output quality, improved user satisfaction, and AI-driven experiences more closely aligned with user expectations. <br><br>
+            • <strong>Generative AI & Diffusion Models:</strong> Pioneered the application of diffusion models, particularly Stable Diffusion, for custom image generation tasks. This involved fine-tuning models, creating specialized image generation solutions, and curating datasets to support diverse image generation needs, expanding the company's generative AI capabilities. <br><br>
+            • <strong>Automation & Infrastructure Development:</strong> Developed and maintained critical automation scripts to streamline AI development workflows. This included automation for LLM hosting, comprehensive benchmarking processes, and synthetic data generation, significantly improving team efficiency and development lifecycle management. <br><br>
+            • <strong>Text-to-Speech (TTS) Innovation:</strong> Designed and implemented a Text-to-Speech (TTS) system for dialog applications, incorporating voice cloning technology and leveraging FastAPI for efficient deployment and scalability. <br><br>
+            `,
             tags: ['Python', 'PyTorch', 'HF Transformers/Diffusers/Datasets', 'Axolotl', 'Unsloth', 'TRL'],
         },
         {
@@ -247,19 +241,26 @@ export let user: User = {
             ctaText: "Message",
             icon: "<i class='text-5xl fa-brands fa-discord text-gray-900 dark:text-gray-300' />"
         },
-        {
-            title: "Telegram",
-            text: "t.me/AunAli121",
-            href: "https://t.me/AunAli121",
-            ctaText: "Message",
-            icon: "<i class='text-5xl fa-brands fa-telegram text-gray-900 dark:text-gray-300' />"
-        },
+        // {
+        //     title: "Telegram",
+        //     text: "t.me/AunAli121",
+        //     href: "https://t.me/AunAli121",
+        //     ctaText: "Message",
+        //     icon: "<i class='text-5xl fa-brands fa-telegram text-gray-900 dark:text-gray-300' />"
+        // },
         {
             title: "GitHub",
             text: "github.com/Aunali321",
             href: "https://github.com/Aunali321",
             ctaText: "Follow",
             icon: "<i class='text-5xl fa-brands fa-github text-gray-900 dark:text-gray-300' />"
+        },
+        {
+            title: "Twitter",
+            text: "@XCossale",
+            href: "https://x.com/cossale",
+            ctaText: "Follow",
+            icon: "<i class='text-5xl fa-brands fa-twitter text-gray-900 dark:text-gray-300' />"
         }
     ]
 
