@@ -66,8 +66,12 @@
 			</p>
 		</div>
 
-		<div class="flex items-center justify-center" transition:fade|local={{ duration: 700 }}>
-			<CircularButton size="md" href="/contact">👋 &nbsp;Connect with me</CircularButton>
+		<div
+			class="flex items-center justify-center gap-4 flex-wrap"
+			transition:fade|local={{ duration: 700 }}
+		>
+			<CircularButton size="md" href="/about">About me</CircularButton>
+			<CircularButton size="md" href="/contact">Connect with me</CircularButton>
 		</div>
 	{/if}
 </section>
