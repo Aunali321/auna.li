@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html class="h-full w-full" lang=" en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/personal_logo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<script>
+			if (window.location.hostname === 'auna.li') {
+				var s = document.createElement('script');
+				s.defer = true;
+				s.src = 'https://analytics.auna.li/script.js';
+				s.dataset.websiteId = '60832451-cc06-4ed5-a179-c95997ad8a32';
+				document.head.appendChild(s);
+			}
+		</script>
+		<!-- a TEMPORARY fix to avoid light theme flashbang bug. (https://github.com/themesberg/flowbite-svelte/issues/782) -->
+		<script>
+			(function () {
+				const theme =
+					localStorage.getItem('color-theme') ||
+					(window.matchMedia('(prefers-color-scheme:  dark)').matches ? 'dark' : 'light');
+				document.documentElement.classList.add(theme);
+			})();
+		</script>
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/personal_logo.png" />
-	<meta name="viewport" content="width=device-width" />
-	<script defer src="https://analytics.auna.li/script.js"
-		data-website-id="60832451-cc06-4ed5-a179-c95997ad8a32"></script>
-	<!-- a TEMPORARY fix to avoid light theme flashbang bug. (https://github.com/themesberg/flowbite-svelte/issues/782) -->
-	<script>
-		(function () {
-			const theme = localStorage.getItem('color-theme') || (window.matchMedia('(prefers-color-scheme:  dark)').matches ? 'dark' : 'light');
-			document.documentElement.classList.add(theme);
-		})();
-	</script>
+		%sveltekit.head%
+	</head>
 
-
-	%sveltekit.head%
-</head>
-
-<body class="h-full w-full dark:bg-gray-900" data-sveltekit-preload-data="hover">
-	<div style="display: contents">%sveltekit.body%</div>
-</body>
-
+	<body class="h-full w-full dark:bg-gray-900" data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config}*/
 const config = {
 	content: [
-		'./src/**/*.{html,js,svelte,ts}',
+		'./src/**/*.{html,js,svelte,ts,md}',
 		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
 	darkMode: 'class',
@@ -50,6 +50,7 @@ const config = {
 	},
 
 	plugins: [
+		require('@tailwindcss/typography'),
 		require('flowbite/plugin'),
 		require('@catppuccin/tailwindcss')({
 			// prefix to use, e.g. `text-pink` becomes `text-ctp-pink`.

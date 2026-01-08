@@ -2,3 +2,169 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Shiki dual theme - light mode uses light colors */
+.shiki,
+.shiki span {
+	color: var(--shiki-light) !important;
+	background-color: var(--shiki-light-bg) !important;
+}
+
+/* Shiki dual theme - dark mode uses dark colors */
+:is(.dark .shiki),
+:is(.dark .shiki) span {
+	color: var(--shiki-dark) !important;
+	background-color: var(--shiki-dark-bg) !important;
+}
+
+/* Custom bullet points */
+.prose ul {
+	list-style: none;
+	padding-left: 1.25em;
+}
+
+.prose ul > li {
+	position: relative;
+}
+
+.prose ul > li::before {
+	content: '●';
+	position: absolute;
+	left: -1.25em;
+	color: #7287fd;
+	font-size: 0.65em;
+	top: 0.45em;
+}
+
+:is(.dark .prose) ul > li::before {
+	color: #b4befe;
+}
+
+/* Code block - Light theme (Latte) */
+.code-wrapper {
+	position: relative;
+	margin: 1.5rem 0;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	background: #eff1f5;
+	border: 1px solid #ccd0da;
+}
+
+.code-wrapper::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3rem;
+	background: #dce0e8;
+	border-bottom: 1px solid #ccd0da;
+}
+
+.code-wrapper::after {
+	content: '●  ●  ●';
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.55rem;
+	color: #8c8fa1;
+}
+
+/* Code block - Dark theme (Mocha) */
+:is(.dark .code-wrapper) {
+	background: #1e1e2e;
+	border-color: #313244;
+}
+
+:is(.dark .code-wrapper)::before {
+	background: #181825;
+	border-bottom-color: #313244;
+}
+
+:is(.dark .code-wrapper)::after {
+	color: #6c7086;
+}
+
+.code-wrapper pre {
+	margin: 0 !important;
+	padding: 4rem 1.25rem 1.25rem !important;
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	overflow-x: auto;
+}
+
+.code-wrapper code {
+	font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+	font-size: 0.875rem !important;
+	line-height: 1.6 !important;
+	background: transparent !important;
+}
+
+/* Copy button - Light theme (Latte) */
+.copy-code-btn {
+	position: absolute;
+	top: 0;
+	right: 0.75rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0 0.7rem;
+	background: transparent;
+	border: none;
+	color: #8c8fa1;
+	font-size: 0.75rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s;
+	z-index: 10;
+}
+
+.copy-code-btn:hover {
+	color: #4c4f69;
+}
+
+.copy-code-btn.copied {
+	color: #40a02b;
+}
+
+/* Copy button - Dark theme (Mocha) */
+:is(.dark .copy-code-btn) {
+	color: #6c7086;
+}
+
+:is(.dark .copy-code-btn):hover {
+	color: #cdd6f4;
+}
+
+:is(.dark .copy-code-btn).copied {
+	color: #a6e3a1;
+}
+
+/* Responsive tables */
+.prose table {
+	display: block;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+}
+
+.prose table th,
+.prose table td {
+	white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+	.prose table {
+		display: table;
+	}
+	
+	.prose table th,
+	.prose table td {
+		white-space: normal;
+	}
+}

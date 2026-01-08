@@ -5,24 +5,17 @@
 	import ExperienceCards from '$lib/components/ExperienceCards.svelte';
 	import ProjectCards from '$lib/components/ProjectCards.svelte';
 	import Heading from '$lib/components/atoms/Heading.svelte';
-	import { onMount } from 'svelte';
-
-	// disable right clicking unless its <a> tag
-	onMount(() => {
-		document.addEventListener('contextmenu', (event) => {
-			// @ts-ignore
-			if (event.target.tagName !== 'A') event.preventDefault();
-		});
-	});
 </script>
 
-<section class="py-12 latte dark:bg-gray-900 select-none dark:mocha">
-	<div class="flex flex-col md:flex-row md:space-x-36 justify-center">
-		<div class="left md:w-1/4">
+<section class="py-12 latte dark:bg-gray-900 dark:mocha">
+	<div
+		class="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24 justify-center px-4 md:px-8 lg:px-16"
+	>
+		<div class="left md:w-1/3 lg:w-1/4 md:min-w-[280px]">
 			<Intro />
 			<Cards />
 		</div>
-		<div class="right max-w-screen-sm">
+		<div class="right max-w-screen-sm flex-1">
 			<Heading>Experience</Heading>
 			<ExperienceCards />
 			<Heading>Projects</Heading>
