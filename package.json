@@ -39,6 +39,8 @@
 	"type": "module",
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
+		"baseline-browser-mapping": "^2.9.13",
+		"caniuse-lite": "^1.0.30001763",
 		"classnames": "^2.3.2",
 		"flowbite": "^1.6.5",
 		"flowbite-svelte": "^0.36.5"
