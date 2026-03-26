@@ -279,7 +279,7 @@ export let user: User = {
 		{
 			title: 'Twitter',
 			text: '@XCossale',
-			href: 'https://x.com/cossale',
+			href: 'https://x.com/xcossale',
 			ctaText: 'Follow',
 			icon: "<i class='text-5xl fa-brands fa-twitter text-gray-900 dark:text-gray-300' />"
 		}
